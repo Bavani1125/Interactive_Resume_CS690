@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Resume — Bavani Karthikeyan Janaki</title>
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header id="home" class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="name" aria-label="Full name">Bavani Karthikeyan Janaki</h1>
+        <p class="title" aria-label="Professional title">Software Engineer & Graduate Student at Long Island University</p>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#summary" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certs" class="nav-link">Certifications</a></li>
+          <li><a href="#interests" class="nav-link">Interests</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn theme-btn" aria-pressed="false" aria-label="Toggle theme">🌗 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sentinel for sticky fallback (no visual) -->
+  <div id="sticky-sentinel" aria-hidden="true"></div>
+
+  <!-- ===== SUMMARY / ABOUT ===== -->
+  <main id="content" class="site-content">
+    <section id="summary" class="section section-summary" aria-labelledby="summary-h">
+      <div class="container">
+        <h2 id="summary-h" class="section-title">Profile</h2>
+
+        <p id="dynamic-greeting" class="greeting" aria-live="polite"></p>
+
+        <p class="intro">
+          Hi, I'm <strong>Bavani</strong>, a <em>Software Engineer</em> focused on building accessible, performant web apps and
+          SOX & HIPAA-ready systems. I love <mark>clean architecture</mark> and data-driven UX.
+          I work with <abbr title="HyperText Markup Language">HTML</abbr>,
+          <abbr title="Cascading Style Sheets">CSS</abbr>,
+          <abbr title="JavaScript">JS</abbr>,
+          and <abbr title="Continuous Integration / Continuous Delivery">CI/CD</abbr> pipelines.
+          Software Engineer with 5+ years of experience designing full-stack web applications, compliance systems, and scalable backend platforms. Expertise in building SOX & HIPAA-compliant solutions, APIs, and responsive UIs. Proven record of reducing violations, accelerating reporting, and enhancing system performance at scale while mentoring teams and strengthening data security. Additional experience in healthcare and government internships, developing AI-ready web solutions and research in predictive analytics and sentiment analysis.
+        </p>
+
+        <p class="intro">
+          <span class="hover-fade">Collaborative</span>, <span class="hover-fade">curious</span>, and
+          <span class="hover-fade">impact-oriented</span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section section-experience" aria-labelledby="experience-h">
+      <div class="container">
+        <h2 id="experience-h" class="section-title">Work Experience</h2>
+
+        <!-- Job 1 -->
+        <article class="job slide-on-scroll" data-io>
+          <header class="job-header">
+            <h3 class="job-title">Software & AI Engineer Intern — Ashine Business Solutions LLC</h3>
+            <p class="job-meta">Jun 2025 – Aug 2025 • New Jersey, USA</p>
+          </header>
+
+          <ol class="responsibilities">
+            <li><span class="has-tip" data-tip="React, TypeScript, HTML/CSS; UX and performance improvements.">Built responsive web UI</span></li>
+            <li><span class="has-tip" data-tip="Explored combined Hugging Face models with Azure AI.">Prototyped AI features</span></li>
+          </ol>
+
+          <details class="job-more">
+            <summary>More details</summary>
+            <p>Partnered with design for Figma handoff and production-ready components.</p>
+          </details>
+        </article>
+
+        <!-- Job 2 -->
+        <article class="job slide-on-scroll" data-io>
+          <header class="job-header">
+            <h3 class="job-title">Senior Software Engineer — Accenture</h3>
+            <p class="job-meta">Sep 2018 – Jan 2024 • Bangalore, India</p>
+          </header>
+
+          <ol class="responsibilities">
+            <li><span class="has-tip" data-tip="SOX & HIPAA audit platforms; 40% fewer violations, 50% fewer manual audits.">Built SOX/HIPAA systems</span></li>
+            <li><span class="has-tip" data-tip="React + TypeScript with reusable components, lazy loading, and code splitting.">Scaled React front-ends</span></li>
+            <li><span class="has-tip" data-tip="REST APIs with Node.js & Python (Flask/FastAPI) on Oracle/PL-SQL.">Delivered secure APIs</span></li>
+          </ol>
+
+          <details class="job-more">
+            <summary>More details</summary>
+            <p>Deployed on AWS with Docker/Kubernetes/Jenkins; mentored 3 developers; Kafka pipelines for data flows.</p>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education" class="section section-education" aria-labelledby="education-h">
+      <div class="container">
+        <h2 id="education-h" class="section-title">Education</h2>
+
+        <div class="edu-controls">
+          <button id="sortGPA" class="btn">Sort by GPA</button>
+        </div>
+
+        <div class="edu-table-wrap">
+          <table class="edu-table" aria-describedby="education-h">
+            <thead>
+              <tr>
+                <th scope="col">Degree</th>
+                <th scope="col">Institution</th>
+                <th scope="col">Graduation</th>
+                <th scope="col">GPA</th>
+                <th scope="col">Achievements</th>
+              </tr>
+            </thead>
+            <tbody id="eduBody">
+              <tr>
+                <td>M.S. in Computer & Information Science</td>
+                <td>
+                  <img src="assets/img/edu-uni2.png" alt="Long Island University logo" class="edu-logo" />
+                  Long Island University, Brooklyn
+                </td>
+                <td>Dec 2025</td>
+                <td data-gpa="3.8">3.8</td>
+                <td>Thesis: Predictive Analysis in Healthcare (Sentiment/NLP)</td>
+              </tr>
+              <tr>
+                <td>B.E. in Electronics & Communication Engineering</td>
+                <td>
+                  <img src="assets/img/edu-uni1.png" alt="Anna University logo" class="edu-logo" />
+                  Meenakshi Sundararajan Engineering College (Anna University)
+                </td>
+                <td>May 2018</td>
+                <td data-gpa="3.0">3.0</td>
+                <td>Paper: 5G Communications</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section section-skills" aria-labelledby="skills-h">
+      <div class="container">
+        <h2 id="skills-h" class="section-title">Skills</h2>
+
+        <div class="skills-toggle" role="group" aria-label="Skill level filters">
+          <button class="chip is-active" data-skill-level="all">All</button>
+          <button class="chip" data-skill-level="beginner">Beginner</button>
+          <button class="chip" data-skill-level="intermediate">Intermediate</button>
+          <button class="chip" data-skill-level="advanced">Advanced</button>
+        </div>
+
+        <!-- Frontend -->
+        <fieldset class="skill-group" data-level="advanced">
+          <legend>Frontend</legend>
+          <div class="skill"><label>React.js</label><progress max="100" value="0" data-target="85"></progress><span class="skill-value">85%</span></div>
+          <div class="skill"><label>TypeScript/JavaScript</label><progress max="100" value="0" data-target="80"></progress><span class="skill-value">80%</span></div>
+          <div class="skill"><label>HTML/CSS</label><progress max="100" value="0" data-target="90"></progress><span class="skill-value">90%</span></div>
+        </fieldset>
+
+        <!-- Backend -->
+        <fieldset class="skill-group" data-level="intermediate">
+          <legend>Backend</legend>
+          <div class="skill"><label>Node.js</label><meter min="0" max="100" value="80" data-target="80"></meter><span class="skill-value">80%</span></div>
+          <div class="skill"><label>Python (Flask/FastAPI)</label><meter min="0" max="100" value="75" data-target="75"></meter><span class="skill-value">75%</span></div>
+          <div class="skill"><label>Java (Spring Boot)</label><meter min="0" max="100" value="65" data-target="65"></meter><span class="skill-value">65%</span></div>
+        </fieldset>
+
+        <!-- Databases -->
+        <fieldset class="skill-group" data-level="intermediate">
+          <legend>Databases</legend>
+          <div class="skill"><label>Oracle</label><meter min="0" max="100" value="80" data-target="80"></meter><span class="skill-value">80%</span></div>
+          <div class="skill"><label>PostgreSQL</label><meter min="0" max="100" value="75" data-target="75"></meter><span class="skill-value">75%</span></div>
+          <div class="skill"><label>MongoDB</label><meter min="0" max="100" value="70" data-target="70"></meter><span class="skill-value">70%</span></div>
+        </fieldset>
+
+        <!-- Cloud & DevOps -->
+        <fieldset class="skill-group" data-level="intermediate">
+          <legend>Cloud & DevOps</legend>
+          <div class="skill"><label>AWS / Docker / Kubernetes</label><progress max="100" value="0" data-target="75"></progress><span class="skill-value">75%</span></div>
+          <div class="skill"><label>Jenkins / GitHub</label><progress max="100" value="0" data-target="70"></progress><span class="skill-value">70%</span></div>
+          <div class="skill"><label>CI/CD</label><progress max="100" value="0" data-target="70"></progress><span class="skill-value">70%</span></div>
+        </fieldset>
+
+        <!-- AI/ML & Big Data -->
+        <fieldset class="skill-group" data-level="beginner">
+          <legend>AI/ML & Big Data</legend>
+          <div class="skill"><label>scikit-learn / NLTK / spaCy</label><meter min="0" max="100" value="65" data-target="65"></meter><span class="skill-value">65%</span></div>
+          <div class="skill"><label>Transformers (BERT, RoBERTa)</label><meter min="0" max="100" value="60" data-target="60"></meter><span class="skill-value">60%</span></div>
+          <div class="skill"><label>Apache Spark / Kafka</label><meter min="0" max="100" value="60" data-target="60"></meter><span class="skill-value">60%</span></div>
+        </fieldset>
+
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section section-projects" aria-labelledby="projects-h">
+  <div class="container">
+    <h2 id="projects-h" class="section-title">Projects</h2>
+
+    <!-- Filter buttons -->
+    <div class="project-filters" role="group" aria-label="Filter projects by technology">
+      <button class="chip is-active" data-tech="all">All</button>
+      <button class="chip" data-tech="react">React</button>
+      <button class="chip" data-tech="python">Python</button>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="project-grid">
+      
+      <!-- Project A — Customer Churn Prediction (Telco) -->
+      <article class="project flip-card" data-tech="python">
+        <div class="flip-card-inner">
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <div class="iframe-wrap">
+              <video controls preload="metadata">
+                <source src="assets/video/demo1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <h3 class="project-name">Customer Churn Prediction (Telco)</h3>
+          </div>
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <dl class="project-meta">
+              <dt>Description</dt>
+              <dd>
+                Designed and deployed an ML pipeline using Python, scikit-learn, and XGBoost with a Streamlit demo,
+                enabling proactive telecom churn prediction and customer retention strategies.
+              </dd>
+            </dl>
+            <p>
+              <a class="link" href="https://github.com/your-username/churn-ml" target="_blank" rel="noopener">GitHub Repo</a>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project B — Food Hall Café Website -->
+      <article class="project flip-card" data-tech="react">
+        <div class="flip-card-inner">
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <img src="assets/img/project1.png" alt="Food Hall Café preview" loading="lazy" />
+            <h3 class="project-name">Food Hall Café</h3>
+          </div>
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <dl class="project-meta">
+              <dt>Description</dt>
+              <dd>
+                Created a responsive React café website with modular components, carousel integration, and performance optimization,
+                delivering seamless cross-device browsing, easy navigation, and engaging user experience.
+              </dd>
+            </dl>
+            <p>
+              <a class="link" href="https://github.com/Bavani1125/FoodHallCafe" target="_blank" rel="noopener">GitHub</a>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project C — Text Mining in Healthcare Reviews -->
+      <article class="project flip-card" data-tech="python">
+        <div class="flip-card-inner">
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <img src="assets/img/project2.png" alt="Text mining & sentiment analysis dashboard" loading="lazy" />
+            <h3 class="project-name">Text Mining in Healthcare Reviews</h3>
+          </div>
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <dl class="project-meta">
+              <dt>Description</dt>
+              <dd>
+                Implemented sentiment analysis and clustering on Yelp and Google hospital reviews, uncovering trends and
+                improvement opportunities, helping providers enhance patient satisfaction and overall service quality.
+              </dd>
+            </dl>
+            <p>
+              <a class="link" href="https://drive.google.com/file/d/1MoIcoG0N1X4VjvmCVJ1rI5H9fNaAi6WZ/view" target="_blank" rel="noopener">Proposal / Docs</a>
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- ===== CERTIFICATIONS / ACHIEVEMENTS ===== -->
+    <section id="certs" class="section section-certs" aria-labelledby="certs-h">
+      <div class="container">
+        <h2 id="certs-h" class="section-title">Certifications & Achievements</h2>
+
+        <dl class="cert-list">
+          <!-- Highlighted with pulse via .badge-pulse (already in CSS) -->
+          <div class="cert-item badge-pulse">
+            <dt>Microsoft Azure Fundamentals (AZ-900)</dt>
+            <dd>Validated cloud services knowledge (highlighted).</dd>
+          </div>
+          <div class="cert-item">
+            <dt>Entrepreneurship — IIM Rohtak</dt>
+            <dd>Fundamentals of innovation and business management.</dd>
+          </div>
+          <div class="cert-item">
+            <dt>Accenture Awards</dt>
+            <dd>Mentorship Excellence (Q3 2022); Project Star of the Quarter (Q2 2023).</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== INTERESTS / HOBBIES ===== -->
+    <section id="interests" class="section section-interests" aria-labelledby="interests-h">
+      <div class="container">
+        <h2 id="interests-h" class="section-title">Interests</h2>
+
+        <div class="gallery">
+          <figure class="gallery-item" data-modal-title="Audiobooks & Podcasts" data-modal-text="I love learning on the go — tech, design, and leadership shows." data-modal-img="assets/img/hobby1.png">
+            <img src="assets/img/hobby1.png" alt="Audiobooks and podcasts" loading="lazy" />
+            <figcaption>Audiobooks & Podcasts</figcaption>
+          </figure>
+
+        <figure class="gallery-item" data-modal-title="Baking" data-modal-text="Weekend bakes; experimenting with sourdough & cakes." data-modal-img="assets/img/hobby2.png">
+            <img src="assets/img/hobby2.png" alt="Baking" loading="lazy" />
+            <figcaption>Baking</figcaption>
+          </figure>
+
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-content" role="document">
+          <button class="modal-close" title="Close" aria-label="Close modal" data-close>×</button>
+          <h3 id="modal-title"></h3>
+          <img id="modal-img" src="" alt="" />
+          <p id="modal-text"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <p>Thank you for visiting my profile! <strong>Let’s Connect.</strong></p>
+
+      <p>
+        Follow me on:
+        <a href="https://www.linkedin.com/in/bavani-karthikeyan-janaki/" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a>
+        |
+        <a href="https://github.com/Bavani1125" target="_blank" rel="noopener noreferrer"><strong>GitHub</strong></a>
+      </p>
+
+      <p>
+        © 2025 Bavani Karthikeyan Janaki |
+        <a href="#home" class="back-link"><strong>Back to Top</strong></a>
+      </p>
+    </div>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
