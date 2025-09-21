@@ -20,28 +20,24 @@ An accessible, responsive single-page interactive resume built with HTML, CSS, a
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshots/s1.png" alt="Home and Header" width="800" />
+  <img src="./assets/screenshots/s1.png" alt="Home and Header" width="800" />
+</p>
+<p align="center">
+  <img src="./assets/screenshots/s2.png" alt="Projects section" width="800" />
+</p>
+<p align="center">
+  <img src="./assets/screenshots/s3.png" alt="Certifications" width="800" />
+</p>
+<p align="center">
+  <img src="./assets/screenshots/s4.png" alt="Interests" width="800" />
+</p>
+<p align="center">
+  <img src="./assets/screenshots/s5.png" alt="Skills" width="800" />
+</p>
+<p align="center">
+  <img src="./assets/screenshots/s6.png" alt="Education / Experience" width="800" />
 </p>
 
-<p align="center">
-  <img src="assets/screenshots/s2.png" alt="Projects section" width="800" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/s3.png" alt="Certifications" width="800" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/s4.png" alt="Interests" width="800" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/s5.png" alt="Skills" width="800" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/s6.png" alt="Education / Experience" width="800" />
-</p>
 
 ## Getting Started
 
