@@ -20,7 +20,7 @@ An accessible, responsive single-page interactive resume built with HTML, CSS, a
 ## Screenshots
 
 <p align="center">
-  <img src="./assets/screenshots/s1.png" alt="Home and Header" width="800" />
+  <img src="./Interactive_Resume_CS690/blob/main/Screenshot%201.png" alt="Home and Header" width="800" />
 </p>
 <p align="center">
   <img src="./assets/screenshots/s2.png" alt="Projects section" width="800" />
