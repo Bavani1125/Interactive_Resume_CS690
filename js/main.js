@@ -200,6 +200,11 @@ skillChips.forEach(chip => {
 /* ===== Projects: filter by technology + flip on click/keyboard ===== */
 const techChips = $$('.project-filters .chip');
 const projects  = $$('.project');
+
+function pauseAllVideos(){
+  $$('video').forEach(v => { try { v.pause(); } catch {} });
+}
+
 techChips.forEach(chip => {
   chip.addEventListener('click', () => {
     techChips.forEach(c => c.classList.remove('is-active'));
@@ -207,18 +212,37 @@ techChips.forEach(chip => {
     const tech = chip.dataset.tech;
     projects.forEach(p => {
       const tags = (p.dataset.tech || '').split(/\s+/);
-      p.style.display = (tech === 'all' || tags.includes(tech)) ? '' : 'none';
+      const show = (tech === 'all' || tags.includes(tech));
+      p.style.display = show ? '' : 'none';
+      if (!show) p.classList.remove('is-flipped'); // reset hidden cards
     });
+    pauseAllVideos();
   });
 });
 
+// Guard to avoid flipping when clicking links/buttons/video
+const shouldIgnoreFlip = el =>
+  el.closest('a,button,input,textarea,select') ||
+  el.closest('.iframe-wrap') ||
+  el.tagName === 'VIDEO';
+
 $$('.flip-card').forEach(card => {
   card.setAttribute('tabindex', '0');
-  card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+  card.setAttribute('role', 'button');
+  card.setAttribute('aria-expanded', 'false');
+
+  function toggleFlip(e){
+    if (e && shouldIgnoreFlip(e.target)) return;
+    card.classList.toggle('is-flipped');
+    card.setAttribute('aria-expanded', String(card.classList.contains('is-flipped')));
+    pauseAllVideos();
+  }
+
+  card.addEventListener('click', toggleFlip);
   card.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      card.classList.toggle('is-flipped');
+      toggleFlip(e);
     }
   });
 });
@@ -246,8 +270,9 @@ $$('[data-close]').forEach(el => {
     modal.setAttribute('aria-hidden', 'true');
   });
 });
+
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('open')) {
+  if (e.key === 'Escape' && modal?.classList.contains('open')) {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
   }
@@ -258,7 +283,7 @@ $('#backToTop')?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/* ===== Theme switcher with localStorage (with smooth CSS transitions across surfaces) ===== */
+/* ===== Theme switcher with localStorage ===== */
 const THEME_KEY = 'resume-theme';
 const themeBtn  = $('#themeToggle');
 
